@@ -27,18 +27,23 @@ namespace MvcMovies
             {
 
 
-                var role = new IdentityRole("Admin");
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+                {
+                    Name = "Admin"
+                };
                 roleManager.Create(role);
 
-                var user = new ApplicationUser();
-                user.UserName = "asdf";
-                user.Email = "asdf@asdf.com";
+                var user = new ApplicationUser
+                {
+                    UserName = "admin",
+                    Email = "admin@admin.com"
+                };
                 string pwd = "Password1234%";
 
                 var newuser = userManager.Create(user, pwd);
                 if (newuser.Succeeded)
                 {
-                    userManager.AddToRole(user.Id,"Admin");
+                    var result1 = userManager.AddToRole(user.Id,"Admin");
                 }
 
 
