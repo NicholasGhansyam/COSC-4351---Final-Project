@@ -11,6 +11,8 @@ using MvcMovies.Models;
 
 namespace MvcMovies.Controllers
 {
+
+    [Authorize]
     public class MoviesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
