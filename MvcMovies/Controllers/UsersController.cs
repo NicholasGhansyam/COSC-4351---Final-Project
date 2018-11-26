@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MvcMovies.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class UsersController : Controller
     {
 

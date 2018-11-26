@@ -34,7 +34,8 @@ namespace MvcMovies.Controllers
             var Roles = context.Roles.ToList();
             return View(Roles);
 
-        }*/
+        }
+        */
 
 
 	
