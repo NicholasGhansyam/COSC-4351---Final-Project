@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace MvcMovies.Controllers
 {
 
-    [Authorize(Roles = "SuperAdmin")]
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         // GET: Admin
