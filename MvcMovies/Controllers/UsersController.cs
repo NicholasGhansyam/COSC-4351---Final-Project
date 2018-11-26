@@ -11,7 +11,6 @@ namespace MvcMovies.Controllers
 {
     public class UsersController : Controller
     {
-
         [Authorize]
         // GET: Users
         public ActionResult Index()
