@@ -11,12 +11,12 @@ namespace MvcMovies.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
+        public ActionResult AdminLink()
         {
             return View();
         }
 
-        public ActionResult CreateUseer()
+        public ActionResult CreateUser()
         {
             return View();
         

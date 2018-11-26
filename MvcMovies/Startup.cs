@@ -30,7 +30,7 @@ namespace MvcMovies
                 roleManager.Create(role);
 
                 var user = new ApplicationUser();
-                user.UserName = "Admin@company.com";
+                user.UserName = "Admin";
                 user.Email = "Admin@company.com";
                 string pwd = "Admin#1";
 
