@@ -26,14 +26,13 @@ namespace MvcMovies
             if (!roleManager.RoleExists("Admin"))
             {
 
-
                 var role = new IdentityRole("Admin");
                 roleManager.Create(role);
 
                 var user = new ApplicationUser();
-                user.UserName = "asdf";
-                user.Email = "asdf@asdf.com";
-                string pwd = "Password1234%";
+                user.UserName = "Admin@company.com";
+                user.Email = "Admin@company.com";
+                string pwd = "Admin#1";
 
                 var newuser = userManager.Create(user, pwd);
                 if (newuser.Succeeded)
