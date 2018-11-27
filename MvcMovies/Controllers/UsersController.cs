@@ -6,18 +6,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcMovie.Models;
 
 namespace MvcMovies.Controllers
 {
     [Authorize(Roles ="Admin")]
     public class UsersController : Controller
     {
+        ApplicationDbContext db = new ApplicationDbContext();
         [Authorize]
         // GET: Users
+        
         public ActionResult Index()
         {
+            
             if (User.Identity.IsAuthenticated)
             {
+                
                 var user = User.Identity;
                 ViewBag.Name = user.Name;
 
@@ -56,5 +61,14 @@ namespace MvcMovies.Controllers
             }
             return false;
         }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
+
 }

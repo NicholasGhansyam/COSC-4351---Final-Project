@@ -12,12 +12,9 @@ namespace MvcMovies.Controllers
     [Authorize]
     public class RoleController : Controller
     {
-        ApplicationDbContext context;
+        ApplicationDbContext context = new ApplicationDbContext();
 
-            public RoleController()
-            {
-                context = new ApplicationDbContext();
-            }
+            
 
             /// <summary>
             /// Get All Roles
@@ -40,7 +37,8 @@ namespace MvcMovies.Controllers
                     return RedirectToAction("Index", "Home");
                 }
 
-                var Roles = context.Roles.ToList();
+            var Roles = context.Roles.ToList();
+            //var Roles = context.Users.ToList();
                 return View(Roles);
 
             }
