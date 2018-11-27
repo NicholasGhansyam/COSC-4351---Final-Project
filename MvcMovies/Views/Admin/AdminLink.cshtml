@@ -4,6 +4,49 @@
 }
 
 <br />
+<table>
 
-@Html.ActionLink("Create New User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+    <tr style="height: 30px; background-color:red; color:#FFFFFF ;border: solid 1px #659EC7;">
+        <td align="center" colspan="2">
+            <h2>Admin Poral Managment</h2>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+        <td style="width:100%; border:dotted 1px;">
+            @Html.ActionLink("Create New User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+        </td>
+
+
+        </td>
+
+    </tr>
+    <tr>
+
+        <td>
+        <td style="width:100%; border:dotted 1px;">
+            @Html.ActionLink("View all Roles", "Index", "Role", routeValues: null, htmlAttributes: new { id = "registerLink" })
+        </td>
+
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td>
+        <td style="width:100%; border:dotted 1px;">
+            @Html.ActionLink("View all Users", "Index", "Role", routeValues: null, htmlAttributes: new { id = "registerLink" })
+        </td>
+
+
+        </td>
+
+    </tr>
+
+</table>
+
+
 
